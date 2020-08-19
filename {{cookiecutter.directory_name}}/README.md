@@ -25,4 +25,10 @@ This file is mandatory for the installation script.
 
 ## Installation
 
+To create a working env and setup all pre-commit hooks just run the installation script:
+```sh
+sh install.sh
+```
+
+
 ## Usage
