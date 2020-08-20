@@ -1,5 +1,9 @@
 # {{cookiecutter.directory_name}}
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) 
+
+
+
 # FIRST THINGS TO DO ON CREATION (this section should not be seen by anyone on your repo, follow and remove it at the end!!!)
 
 create a conda env with pre-commit installed: 
