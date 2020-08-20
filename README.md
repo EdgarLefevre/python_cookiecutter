@@ -36,3 +36,21 @@ git add *
 git commit -am "First commit"
 git push -u origin master
 ```
+## Architecture
+
+
+## Pre-commit
+
+Along side with this template, a [pre-commit](pre-commit.com) pipeline is setup.
+Once installed, this pipeline will run each time you do a commit, the main purpose of this pipeline is to check the code (style formating, imports, unused function...) and other things such as the conda environement file. The linters that we use here are mostly [flake8](https://flake8.pycqa.org/en/latest/) and [black](https://github.com/psf/black). 
+
+The hooks are setup in `.pre-commit-config.yaml`, if you want to add (or remove) some, you have to edit this file.
+
+Several usefull commands:
+```sh
+pre-commit install # install hooks
+pre-commit clean # clean hooks (usefull when a hook is updated)
+pre-commit run --all-files # run all hooks on all files
+```
+
+> Note: to avoid pre-commit running on a commit just do `git commit -am "msg" --no-verify` but this not really recommended.
