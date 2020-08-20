@@ -25,3 +25,4 @@ repos:
     rev: master
     hooks:
     -   id: conda_check_env
+    -   id: conda_check_deps
