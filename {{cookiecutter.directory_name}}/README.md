@@ -4,7 +4,7 @@
 
 create a conda env with pre-commit installed: 
 ```sh
-conda create -n envname python=3.7
+conda create -n {{cookiecutter.directory_name}} python=3.7
 conda install -c conda-forge pre-commit #if you are not root, maybe you need to install git and openssh with conda
 ```
 
