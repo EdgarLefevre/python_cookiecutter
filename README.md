@@ -38,6 +38,18 @@ git push -u origin master
 ```
 ## Architecture
 
+The template provides a classic python project architecture:
+ - data: python files relative to data (dataset preparation for exemple)
+ - models: here are all models (data science project)
+ - src: here are your sources
+ - test: folder for test files
+ - utils: here you can put every file with misc function that you use in the project
+
+With all those folders, come some config files:
+ - .flake8, .pre-commit-config.yaml, pyproject.toml: are config files for pre-commit's hooks
+ - .gitignore: config file for git, it excludes files from the git repo
+ - README.md
+ - install.sh: this is the final install script of the project, the one that users use. (The first section of the readme files will explain you how to install the project).
 
 ## Pre-commit
 
