@@ -66,3 +66,5 @@ pre-commit run --all-files # run all hooks on all files
 ```
 
 > Note: to avoid pre-commit running on a commit just do `git commit -am "msg" --no-verify` but this not really recommended.
+
+> If you don't understand a flake8 error look at https://www.flake8rules.com/rules/E722.html (with your error id)
