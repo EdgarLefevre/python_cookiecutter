@@ -23,7 +23,7 @@ Each time you'll commit, a pipeline will run to check your files (pep8 formattin
 Last step is create an env.yml file in order to fix all python's modules and deps. 
 To do that, you need to run:
 ```sh
-conda env export > env.yml
+conda env export > env.yaml
 ```
 This file is mandatory for the installation script.
 
