@@ -68,3 +68,32 @@ pre-commit run --all-files # run all hooks on all files
 > Note: to avoid pre-commit running on a commit just do `git commit -am "msg" --no-verify` but this not really recommended.
 
 > If you don't understand a flake8 error look at https://www.flake8rules.com/rules/E722.html (with your error id)
+
+
+## Pytest
+
+For the tests we choose to use [pytest](https://docs.pytest.org/en/stable/). This is a classic python test library, very easy to use.
+
+To run the tests, you just have to run pytest:
+```shell script
+pytest
+```
+
+Pytest is integrated as a hook, with this setup, we ensure that tests pass at every commit.
+
+## Coverage.py
+
+[Coverage.py](coverage.readthedocs.io/) is a classic python library for running coverage test.
+
+With this lib, we can run the tests and see if there is useless code and we forgot to test some functions.
+
+To do that, you just need to run:
+```shell script
+coverage run -m pytest
+```
+This line will create a `.coverage` file (binary file), to see the file you have to run:
+```shell script
+coverage report -m 
+```
+
+This is also implemented as a hook, if there less of 75% of the code covered this will produce an error.

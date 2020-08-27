@@ -33,3 +33,8 @@ repos:
         entry: "python .run_pytest.py"
         language: "conda"
         types: [python]
+    -   id: check_coverage
+        name: "Check Coverage"
+        entry: "python .check_coverage.py"
+        language: "conda"
+        types: [python]
