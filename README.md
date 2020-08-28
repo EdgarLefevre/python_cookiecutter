@@ -168,7 +168,7 @@ To:
 ```rst
 Welcome to Getting Started with Sphinx's documentation!
 =======================================================
-.. automodule:: my_project.main
+.. automodule:: square
     :members:
 .. toctree::
    :maxdepth: 2
@@ -210,4 +210,5 @@ This will generate html files in `docs/_build/html/`, the one we are interested 
 
 
 Example of what the previous sample will look like.
+
 ![Example de doc](img/ex_doc.png)
