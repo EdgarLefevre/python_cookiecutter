@@ -97,3 +97,117 @@ coverage report -m
 ```
 
 This is also implemented as a hook, if there less of 75% of the code covered this will produce an error.
+
+## Sphinx
+
+[Sphinx](https://www.sphinx-doc.org/en/master/index.html) is used to generate documentation for the project. 
+
+By setting up few things and comment functions in the code, Sphinx will be able to generate html documentation.
+
+[Tuto](https://medium.com/@eikonomega/getting-started-with-sphinx-autodoc-part-1-2cebbbca5365)
+
+### Using Sphinx
+Installation: 
+```shell script
+conda install -c conda-forge sphinx
+```
+
+Initialization (at project's root):
+```shell script
+mkdir docs
+cd docs
+sphinx quick-start
+```
+
+The last command will generate few files and folders inside the docs folder, we need to modify some of these files.
+
+In `conf.py` change:
+```python
+# import os
+# import sys
+# sys.path.insert(0, os.path.abspath('.'))
+```
+
+To:
+```python
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
+```
+
+And then add extensions to extensions' list:
+```python
+# from:
+extensions = []
+# to:
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.napoleon']
+```
+
+Then in `index.rst`:
+
+From: 
+```rst
+.. Getting Started with Sphinx documentation master file, created by
+   sphinx-quickstart on Mon Nov 13 11:41:03 2017.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+Welcome to Getting Started with Sphinx's documentation!
+=======================================================
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+Indices and tables
+==================
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+```
+
+To:
+
+```rst
+Welcome to Getting Started with Sphinx's documentation!
+=======================================================
+.. automodule:: my_project.main
+    :members:
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+Indices and tables
+==================
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+```
+
+Last but not least, we need to add comments to our functions:
+```python
+"""
+square.py
+============================
+
+The core file of my example project
+"""
+
+
+def square(x):
+    """
+    Return x squared.
+
+    Parameters
+    ------------------
+    x
+        A number.
+    """
+    return x * x
+```
+Once, when we have commented all our functions:
+```shell script
+cd docs
+make html
+```
+This will generate html files in `docs/_build/html/`, the one we are interested in is `index.html`.
+
+
+Example of what the previous sample will look like.
+![Example de doc](img/ex_doc.png)
