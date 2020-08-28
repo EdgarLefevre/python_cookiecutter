@@ -39,7 +39,8 @@ git push -u origin master
 ## Architecture
 
 The template provides a classic python project architecture:
- - data: python files relative to data (dataset preparation for exemple)
+ - data: python files relative to data (dataset preparation for example)
+ - docs: folder where the documentation will be generated
  - models: here are all models (data science project)
  - src: here are your sources
  - test: folder for test files
