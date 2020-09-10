@@ -213,3 +213,6 @@ This will generate html files in `docs/_build/html/`, the one we are interested 
 Example of what the previous sample will look like.
 
 ![Example de doc](img/ex_doc.png)
+
+
+> This theme is quite ugly and misleading, I recommand to use read_the_doc theme [https://github.com/readthedocs/sphinx_rtd_theme](https://github.com/readthedocs/sphinx_rtd_theme)
