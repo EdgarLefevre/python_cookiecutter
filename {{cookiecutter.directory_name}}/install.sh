@@ -1,2 +1,2 @@
-conda create env -f env.yaml
+conda create env -f environment.yml
 pre-commit install 
