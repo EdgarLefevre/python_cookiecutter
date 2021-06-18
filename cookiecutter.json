@@ -1,4 +1,6 @@
 {
 	"directory_name": "Test",
-	"file_name": "main"
+	"file_name": "main",
+	"author": "Edgar Lefevre",
+	"year": 2021,
 }
