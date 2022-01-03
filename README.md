@@ -117,7 +117,7 @@ Initialization (at project's root):
 ```shell script
 mkdir docs
 cd docs
-sphinx quick-start
+sphinx-quickstart
 ```
 
 The last command will generate few files and folders inside the docs folder, we need to modify some of these files.
