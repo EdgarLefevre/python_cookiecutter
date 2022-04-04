@@ -26,6 +26,10 @@ repos:
     hooks:
     -   id: conda_check_env
     -   id: conda_check_deps
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: ''  # Use the sha / tag you want to point at
+    hooks:
+    -   id: mypy
 #-   repo: local
 #    hooks:
 #    -   id: run_test
