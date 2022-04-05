@@ -27,7 +27,7 @@ repos:
     -   id: conda_check_env
     -   id: conda_check_deps
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: master
+    rev: v0.942
     hooks:
     -   id: mypy
 #-   repo: local
